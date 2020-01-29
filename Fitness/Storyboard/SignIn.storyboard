@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0M6-k2-1Qu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="v4B-Ok-zQ7">
+            <objects>
+                <viewController id="R2O-w8-pWB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zrf-D7-gOu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aof-IL-hFy">
+                                <rect key="frame" x="56.5" y="424.5" width="301" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="3tQ-vx-rjM"/>
+                                    <constraint firstAttribute="width" constant="301" id="YVT-YM-yDZ"/>
+                                </constraints>
+                                <state key="normal" image="logo"/>
+                                <connections>
+                                    <action selector="handleAppleIdRequest:" destination="R2O-w8-pWB" eventType="touchUpInside" id="ZeH-a9-hao"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aof-IL-hFy" firstAttribute="centerX" secondItem="GF6-re-ulf" secondAttribute="centerX" id="Q4b-fx-Q9h"/>
+                            <constraint firstItem="aof-IL-hFy" firstAttribute="centerY" secondItem="GF6-re-ulf" secondAttribute="centerY" id="rUn-9V-dbT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GF6-re-ulf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gqG-Rj-vEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2687" y="-2859"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="3rm-TF-r7l">
+            <objects>
+                <viewController storyboardIdentifier="sf_signin_view_controller" id="0M6-k2-1Qu" customClass="SFSignInViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qid-jZ-ubh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diet.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-b0-aIW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54H-uq-D5b" customClass="GIDSignInButton">
+                                <rect key="frame" x="18" y="646" width="379" height="104"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="RRm-tk-Hfg"/>
+                                    <constraint firstAttribute="width" constant="379" id="q2n-B8-SKI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ApP-8J-nDX" firstAttribute="trailing" secondItem="TE8-b0-aIW" secondAttribute="trailing" id="RsD-Lj-kbo"/>
+                            <constraint firstItem="54H-uq-D5b" firstAttribute="centerX" secondItem="ApP-8J-nDX" secondAttribute="centerX" id="TZt-0g-uog"/>
+                            <constraint firstItem="TE8-b0-aIW" firstAttribute="leading" secondItem="ApP-8J-nDX" secondAttribute="leading" id="WSS-X7-7bh"/>
+                            <constraint firstItem="TE8-b0-aIW" firstAttribute="top" secondItem="ApP-8J-nDX" secondAttribute="top" id="cfP-Z9-afq"/>
+                            <constraint firstItem="54H-uq-D5b" firstAttribute="top" secondItem="TE8-b0-aIW" secondAttribute="bottom" constant="-250" id="mSS-ZP-1cz"/>
+                            <constraint firstItem="TE8-b0-aIW" firstAttribute="bottom" secondItem="ApP-8J-nDX" secondAttribute="bottom" constant="34" id="x8h-8C-oqY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ApP-8J-nDX"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="54H-uq-D5b" id="qd6-FL-TdW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRR-aI-gsb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3650.7246376811595" y="-2859.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="diet.jpeg" width="264" height="191"/>
+        <image name="logo" width="446" height="96"/>
+    </resources>
+</document>

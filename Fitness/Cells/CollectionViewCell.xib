@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Fitness" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="722"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="722"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TdM-br-Lku">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="712"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="five" translatesAutoresizingMaskIntoConstraints="NO" id="Vel-by-38u">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="722"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0d-JE-OQ4">
+                                <rect key="frame" x="0.0" y="672" width="374" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="STs-iy-T9l">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EV-Tf-yVd">
+                                            <rect key="frame" x="8" y="7.5" width="55" height="25.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6EV-Tf-yVd" firstAttribute="leading" secondItem="STs-iy-T9l" secondAttribute="leading" constant="8" id="BWV-ve-tPk"/>
+                                        <constraint firstItem="6EV-Tf-yVd" firstAttribute="centerY" secondItem="STs-iy-T9l" secondAttribute="centerY" constant="-5" id="gPZ-BV-wfL"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hm7-ih-VZ2"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="J0d-JE-OQ4" firstAttribute="bottom" secondItem="Vel-by-38u" secondAttribute="bottom" id="A1G-cc-ILb"/>
+                            <constraint firstItem="J0d-JE-OQ4" firstAttribute="trailing" secondItem="Vel-by-38u" secondAttribute="trailing" id="Fby-Vc-nbs"/>
+                            <constraint firstAttribute="bottom" secondItem="Vel-by-38u" secondAttribute="bottom" constant="-10" id="K1r-mI-UCe"/>
+                            <constraint firstAttribute="height" constant="712" id="RUd-Qu-Wvo"/>
+                            <constraint firstAttribute="trailing" secondItem="Vel-by-38u" secondAttribute="trailing" id="i2u-BW-ib9"/>
+                            <constraint firstItem="J0d-JE-OQ4" firstAttribute="leading" secondItem="Vel-by-38u" secondAttribute="leading" id="kb4-Qv-e7J"/>
+                            <constraint firstItem="Vel-by-38u" firstAttribute="leading" secondItem="TdM-br-Lku" secondAttribute="leading" id="nOa-xh-7f4"/>
+                            <constraint firstAttribute="width" constant="374" id="pyP-Jo-1PF"/>
+                            <constraint firstItem="Vel-by-38u" firstAttribute="top" secondItem="TdM-br-Lku" secondAttribute="top" id="tFd-oe-NI3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="TdM-br-Lku" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="gJY-rg-yN2"/>
+                <constraint firstItem="TdM-br-Lku" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="hYN-I7-ABZ"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="TdM-br-Lku" secondAttribute="bottom" constant="10" id="mbb-Hy-FU3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="235" height="386"/>
+            <connections>
+                <outlet property="containerView" destination="TdM-br-Lku" id="dup-0p-pVG"/>
+                <outlet property="planCost" destination="6EV-Tf-yVd" id="BCy-e4-EsR"/>
+                <outlet property="planImage" destination="Vel-by-38u" id="s0h-jb-IwE"/>
+            </connections>
+            <point key="canvasLocation" x="107.24637681159422" y="145.3125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="five" width="228" height="320"/>
+    </resources>
+</document>

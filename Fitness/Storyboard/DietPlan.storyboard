@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lT8-e0-Wy5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Diet Plan View Controller-->
+        <scene sceneID="kVR-MD-m9v">
+            <objects>
+                <viewController storyboardIdentifier="sf_diet_plan_view_controller" id="sgF-6O-oHP" customClass="SFDietPlanViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ESE-vd-yo1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT DIET PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4t-i8-u5p">
+                                <rect key="frame" x="20" y="100" width="244" height="35.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="auk-e6-oy4">
+                                <rect key="frame" x="20" y="182" width="374" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="30" minimumInteritemSpacing="30" sectionInsetReference="safeArea" id="9f5-6J-gZm">
+                                    <size key="itemSize" width="313" height="712"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sgF-6O-oHP" id="yZS-kd-C1T"/>
+                                    <outlet property="delegate" destination="sgF-6O-oHP" id="7J4-cC-rZK"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fF-VG-MSn">
+                                <rect key="frame" x="329" y="102" width="65" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="LOGOUT"/>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="sgF-6O-oHP" eventType="touchUpInside" id="hTN-2a-Muh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U37-mr-qni" firstAttribute="bottom" secondItem="auk-e6-oy4" secondAttribute="bottom" constant="12" id="0O8-fy-hhN"/>
+                            <constraint firstItem="U37-mr-qni" firstAttribute="trailing" secondItem="auk-e6-oy4" secondAttribute="trailing" constant="20" id="38W-kQ-bu7"/>
+                            <constraint firstItem="c4t-i8-u5p" firstAttribute="leading" secondItem="U37-mr-qni" secondAttribute="leading" constant="20" id="8M2-la-FHx"/>
+                            <constraint firstItem="auk-e6-oy4" firstAttribute="top" secondItem="8fF-VG-MSn" secondAttribute="bottom" constant="50" id="QJA-9X-yLM"/>
+                            <constraint firstItem="auk-e6-oy4" firstAttribute="top" secondItem="c4t-i8-u5p" secondAttribute="bottom" constant="46.5" id="cQN-dd-EnV"/>
+                            <constraint firstItem="U37-mr-qni" firstAttribute="trailing" secondItem="c4t-i8-u5p" secondAttribute="trailing" constant="150" id="gvs-YB-Xzd"/>
+                            <constraint firstItem="8fF-VG-MSn" firstAttribute="top" secondItem="U37-mr-qni" secondAttribute="top" constant="14" id="hdx-RM-OnX"/>
+                            <constraint firstItem="auk-e6-oy4" firstAttribute="leading" secondItem="U37-mr-qni" secondAttribute="leading" constant="20" id="iV9-B2-Vxy"/>
+                            <constraint firstItem="c4t-i8-u5p" firstAttribute="top" secondItem="U37-mr-qni" secondAttribute="top" constant="12" id="oXe-a4-Mhk"/>
+                            <constraint firstItem="U37-mr-qni" firstAttribute="trailing" secondItem="8fF-VG-MSn" secondAttribute="trailing" constant="20" id="pAe-Gr-kPS"/>
+                            <constraint firstItem="8fF-VG-MSn" firstAttribute="leading" secondItem="c4t-i8-u5p" secondAttribute="trailing" constant="65" id="qtQ-Re-dxZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U37-mr-qni"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Eke-VD-khE"/>
+                    <connections>
+                        <outlet property="DietPlanBanners" destination="auk-e6-oy4" id="rde-lJ-x0J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvE-Y1-bWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="-57"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qv4-Dk-rrC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lT8-e0-Wy5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PQf-5f-0rr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sgF-6O-oHP" kind="relationship" relationship="rootViewController" id="xJe-bS-1gD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0b0-im-4Hs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="-58"/>
+        </scene>
+    </scenes>
+</document>
